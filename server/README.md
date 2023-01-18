@@ -1,1 +1,0 @@
-# akki-jang server

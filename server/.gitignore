@@ -1,0 +1,6 @@
+.gradle
+.idea
+HELP.md
+*.class
+**/build/
+!src/**/build

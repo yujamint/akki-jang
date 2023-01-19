@@ -5,3 +5,4 @@ HELP.md
 **/build/
 !src/**/build
 out
+application-oauth.properties

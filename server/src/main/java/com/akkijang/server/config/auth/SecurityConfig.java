@@ -18,14 +18,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .headers().frameOptions().disable()
                 .and()
                     .authorizeRequests()
-                    .antMatchers("/", "/css/**", "/images/**", "js/**", "/h2-console").permitAll()
+                    .antMatchers("/", "/css/**", "/images/**", "js/**", "/h2-console/**").permitAll()
                     .anyRequest().authenticated() // 그 외의 요청은 인증된 사용자만 이용 가능
                 .and()
                     .logout()
                         .logoutSuccessUrl("/")
                 .and()
                     .oauth2Login()
-                        .defaultSuccessUrl("https://www.google.com")
+                        .defaultSuccessUrl("http://localhost:3000")
                             .userInfoEndpoint()
                                 .userService(customOAuth2UserService);
     }
